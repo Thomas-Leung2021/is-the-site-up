@@ -41,4 +41,10 @@ public class UrlCheckController {
         }
         return returnMessage;
     }
+
+    // E.g. http://localhost:8080/print?word=hello-world
+    @GetMapping("/print")
+    public String getServiceThenController(@RequestParam String word) {
+        return word;
+    }
 }
